@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColour = Color(0xFF1D1E33);
@@ -24,6 +25,23 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: activeCardColour,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          FontAwesomeIcons.mars,
+                          size: 80,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          'MALE',
+                          style: TextStyle(
+                              fontSize: 18.0, color: Color(0xFF8D8E98)),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
@@ -99,16 +117,16 @@ class ReusableCard extends StatelessWidget {
   //https://youtu.be/kn0EOS-ZiIc
   //keys help widget to keep track of it states
   final Color colour;
-  final Widget childWidget;
+  final Widget cardChild;
   //statless dont change state -> immutable -> gets destroyed every time created -> need to add final to properties
   //const vs final
-  ReusableCard({@required this.colour, this.childWidget});
+  ReusableCard({@required this.colour, this.cardChild});
   //@required annotation means this property is required to be initialized
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: childWidget,
+      child: cardChild,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: colour, //color property go inside decoration
