@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:bmi_calculator/ReusableCard.dart';
+import 'package:bmi_calculator/IconContent.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColour = Color(0xFF1D1E33);
@@ -93,62 +95,6 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
       */
-    );
-  }
-}
-
-class IconContent extends StatelessWidget {
-  final String label;
-  final IconData icon;
-  IconContent({@required this.icon, @required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(
-          icon,
-          size: 80,
-        ),
-        SizedBox(
-          height: 15.0,
-        ),
-        Text(
-          label,
-          style: TextStyle(fontSize: 18.0, color: Color(0xFF8D8E98)),
-        )
-      ],
-    );
-  }
-}
-
-//Refactoring of widget
-class ReusableCard extends StatelessWidget {
-  /*
-      const ReusableCard({
-        Key key,
-      }) : super(key: key);
-    */
-  //we dont need key here so delete it
-  //https://youtu.be/kn0EOS-ZiIc
-  //keys help widget to keep track of it states
-  final Color colour;
-  final Widget cardChild;
-  //statless dont change state -> immutable -> gets destroyed every time created -> need to add final to properties
-  //const vs final
-  ReusableCard({@required this.colour, this.cardChild});
-  //@required annotation means this property is required to be initialized
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: cardChild,
-      margin: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: colour, //color property go inside decoration
-        borderRadius: BorderRadius.circular(10),
-      ),
     );
   }
 }
