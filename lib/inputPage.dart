@@ -18,25 +18,35 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: ReusableCard(),
+            child: ReusableCard(
+              colour: Color(0xFF1D1E33),
+            ),
           ),
           Expanded(
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  ),
                 ),
               ],
             ),
@@ -70,18 +80,25 @@ class _InputPageState extends State<InputPage> {
 
 //Refactoring of widget
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({
-    Key key,
-  }) : super(key: key);
+  /*
+      const ReusableCard({
+        Key key,
+      }) : super(key: key);
+    */
+  //we dont need key here so delete it
+  //https://youtu.be/kn0EOS-ZiIc
+  //keys help widget to keep track of it states
+  Color colour;
+
+  ReusableCard({@required this.colour});
+  //@required annotation means this property is required to be initialized
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 170,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Color(0xFF1D1E33), //color property go inside decoration
+        color: colour, //color property go inside decoration
         borderRadius: BorderRadius.circular(10),
       ),
     );
