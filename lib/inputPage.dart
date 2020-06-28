@@ -99,14 +99,16 @@ class ReusableCard extends StatelessWidget {
   //https://youtu.be/kn0EOS-ZiIc
   //keys help widget to keep track of it states
   final Color colour;
+  final Widget childWidget;
   //statless dont change state -> immutable -> gets destroyed every time created -> need to add final to properties
   //const vs final
-  ReusableCard({@required this.colour});
+  ReusableCard({@required this.colour, this.childWidget});
   //@required annotation means this property is required to be initialized
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: childWidget,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: colour, //color property go inside decoration
