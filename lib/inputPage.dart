@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const bottomContainerHeight = 80.0;
+const activeCardColour = Color(0xFF1D1E33);
+const bottomContainerColour = Colors.pink;
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -19,12 +23,12 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
               ],
@@ -32,7 +36,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: Color(0xFF1D1E33),
+              colour: activeCardColour,
             ),
           ),
           Expanded(
@@ -40,16 +44,22 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
               ],
             ),
+          ),
+          Container(
+            color: bottomContainerColour,
+            margin: EdgeInsets.only(top: 10),
+            width: double.infinity,
+            height: bottomContainerHeight,
           ),
         ],
       ),
@@ -88,8 +98,9 @@ class ReusableCard extends StatelessWidget {
   //we dont need key here so delete it
   //https://youtu.be/kn0EOS-ZiIc
   //keys help widget to keep track of it states
-  Color colour;
-
+  final Color colour;
+  //statless dont change state -> immutable -> gets destroyed every time created -> need to add final to properties
+  //const vs final
   ReusableCard({@required this.colour});
   //@required annotation means this property is required to be initialized
 
