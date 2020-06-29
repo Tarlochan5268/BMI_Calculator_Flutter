@@ -17,7 +17,7 @@ We’re going to make a Body Mass Index Calculator inspired by the beautiful des
 - Used Flutter themes to create coherent branding. 
 - Created multi-page apps using Flutter Routes and Navigator.
 - Extract and refactor Flutter Widgets with a click of the button. 
-- Pass functions as parameters and fields.
+- Pass functions as parameters and fields i.e Functions as First Order Objects.
 - Used the GestureDetector Widget to detect more than just a tap.
 - Used Enumerations to simplify Gender.
 - Used custom colour palettes by using hex codes.
