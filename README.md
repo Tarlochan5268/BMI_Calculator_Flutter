@@ -25,4 +25,5 @@ We’re going to make a Body Mass Index Calculator inspired by the beautiful des
 - Understand Dart Enums and the Ternary Operator.
 - Composition vs. inheritance and the Flutter way of creating custom UI.
 - Difference between const and final in Dart and when to use each.
+- Used Dedicated constants file
 ![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
