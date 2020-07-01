@@ -17,11 +17,13 @@ We’re going to make a Body Mass Index Calculator inspired by the beautiful des
 - Used Flutter themes to create coherent branding. 
 - Created multi-page apps using Flutter Routes and Navigator.
 - Extract and refactor Flutter Widgets with a click of the button. 
-- Pass functions as parameters and fields.
+- Pass functions as parameters and fields i.e Functions as First Order Objects.
 - Used the GestureDetector Widget to detect more than just a tap.
+- Used Enumerations to simplify Gender.
 - Used custom colour palettes by using hex codes.
 - Customised Flutter Widgets to achieve a specific design style.
 - Understand Dart Enums and the Ternary Operator.
 - Composition vs. inheritance and the Flutter way of creating custom UI.
 - Difference between const and final in Dart and when to use each.
+- Used Dedicated constants file
 ![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
