@@ -4,7 +4,6 @@ import 'package:bmi_calculator/ReusableCard.dart';
 import 'package:bmi_calculator/IconContent.dart';
 import 'constants.dart';
 import 'RoundIconCustomButton.dart';
-import 'ResultPage.dart';
 
 enum Gender { male, female }
 
@@ -211,8 +210,8 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResultPage()));
+              //Navigator.push(context,MaterialPageRoute(builder: (context) => ResultPage()));
+              Navigator.pushNamed(context, '/result');
             },
             child: Container(
               alignment: Alignment.center,
