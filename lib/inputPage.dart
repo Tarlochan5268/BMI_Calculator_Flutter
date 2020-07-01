@@ -4,6 +4,7 @@ import 'package:bmi_calculator/ReusableCard.dart';
 import 'package:bmi_calculator/IconContent.dart';
 import 'constants.dart';
 import 'RoundIconCustomButton.dart';
+import 'customBottomBar.dart';
 
 enum Gender { male, female }
 
@@ -208,21 +209,12 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          CustomBottomBar(
+            buttonBarTitle: "CALCULATE",
             onTap: () {
               //Navigator.push(context,MaterialPageRoute(builder: (context) => ResultPage()));
               Navigator.pushNamed(context, '/result');
             },
-            child: Container(
-              alignment: Alignment.center,
-              color: kBottomContainerColour,
-              margin: EdgeInsets.only(top: 10),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-              child: Text(
-                'CALCULATE',
-              ),
-            ),
           ),
         ],
       ),
